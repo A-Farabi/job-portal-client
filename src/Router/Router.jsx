@@ -5,20 +5,25 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import MainLayout from "../Layout/MainLayout";
+import Home from "../Pages/Home";
+import Registar from "../Component/Registar";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: (
-      <div>
-        <h1>Hello World</h1>
-        <Link to="about">About Us</Link>
-      </div>
-    ),
-  },
-  {
-    path: "about",
-    element: <div>About</div>,
+    element: <MainLayout></MainLayout>,
+    errorElement: <h1>Route Not Fpound</h1>,
+    children:[
+      {
+        path: '/',
+        element: <Home></Home>
+      },
+      {
+        path: 'Registar',
+        element: <Registar></Registar>
+      }
+    ]
   },
 ]);
 
