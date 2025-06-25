@@ -8,6 +8,7 @@ import {
 import MainLayout from "../Layout/MainLayout";
 import Home from "../Pages/Home";
 import Registar from "../Component/Registar";
+import AuthProvider from "../Context/AuthProvider";
 
 const router = createBrowserRouter([
   {
@@ -28,7 +29,9 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
 );
 
 export default router
