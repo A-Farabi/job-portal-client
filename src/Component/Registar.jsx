@@ -18,6 +18,7 @@ const handleRegistar = e => {
   }
 
   setPasswordError('')
+  form.reset()
 
   console.log(email, password);
 }
