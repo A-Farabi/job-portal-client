@@ -52,7 +52,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-end gap-5">
           <Link to="/registar" className="btn">Resigtar</Link>
-          <Link className="btn">Resigtar</Link>
+          <Link to="/login" className="btn">Login</Link>
 
         </div>
       </div>
