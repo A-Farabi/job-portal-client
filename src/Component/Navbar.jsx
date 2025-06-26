@@ -49,7 +49,7 @@ const {user, signOutUser} = useContext(AuthContext)
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Job Portal</a>
+          <Link to="/" className="btn btn-ghost text-xl">Job Portal</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
