@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import AuthContext from "../Context/AuthContext";
 
 const Navbar = () => {
+
+const {user, signOutUser} = useContext(AuthContext)
+
   const links = (
     <>
       <li>
@@ -45,14 +49,21 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-xl">Job Portal</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end gap-5">
-          <Link to="/registar" className="btn">Resigtar</Link>
+
+          {
+            user ? <button className="btn" onClick={signOutUser}>Logout</button> :
+          <>
+            <Link to="/registar" className="btn">Resigtar</Link>
           <Link to="/login" className="btn">Login</Link>
+          </>
+          }
+
 
         </div>
       </div>
