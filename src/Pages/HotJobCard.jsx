@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const HotJobCard = ({ job }) => {
   // Format salary range
@@ -56,9 +57,9 @@ const HotJobCard = ({ job }) => {
 
       <div className="flex items-center justify-between">
         <span className="font-bold text-blue-600">{formatSalary()}</span>
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+        <Link to={`/jobs/${job._id}`} className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
           Apply Now
-        </button>
+        </Link>
       </div>
     </div>
   );
