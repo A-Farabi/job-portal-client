@@ -4,7 +4,7 @@ import UseAuth from "../Hooks/UseAuth";
 
 const JobApply = () => {
   const {id} = useParams();
-  const user = UseAuth()
+  const {user} = UseAuth()
   console.log(id);
 
   const submitJobApply = e =>{

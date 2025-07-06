@@ -8,12 +8,12 @@ const {user, signOutUser} = useContext(AuthContext)
 
   const links = (
     <>
-      <li>
-        <a>Item 1</a>
-      </li>
-      <li>
-        <a>Item 1</a>
-      </li>
+      <Link to='/'>
+        <a>Home</a>
+      </Link>
+      <Link to="/myApplications">
+        <a>My Applications</a>
+      </Link>
       <li>
         <a>Item 3</a>
       </li>
