@@ -10,7 +10,6 @@ const HotJobs = () => {
       .then((res) => res.json())
       .then((data) => {
         setJobs(data.slice(0, 8));
-        console.log(data);
       });
   });
 
