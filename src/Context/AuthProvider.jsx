@@ -40,6 +40,15 @@ const AuthProvider = ({ children }) => {
         .then(res => console.log(res.data))
       }
 
+      // if user not found delete cookies 
+
+      else{
+        axios.post('http://localhost:5000/logout', {}, {
+          withCredentials:true
+        })
+        .then(res => console.log(res.data))
+      }
+
       setLoading(false)
     })
 
